@@ -1,5 +1,7 @@
 # 📡 IoT 대시보드 (React + Node.js + PostgreSQL)
 
+[🇺🇸 English README](../README.md)
+
 ## 👩‍💻 프로젝트 개요
 
 온도/습도, 문 잠금, 조명 상태를 **실시간 시각화**하는 풀스택 IoT 대시보드입니다.  
