@@ -85,12 +85,12 @@ npm run dev
 
 ## 📘 Documentation
 
-- [Korean Documentation (README_ko.md)](docs/README_ko.md)
-- `docs/CONFIGURATION_ko.md` — Configuration guide
-- `docs/MODULES_ko.md` — Modules & architecture
-- `docs/API_SPEC_ko.md` — API specification
-- `docs/IoT_Dashboard_Presentation.pptx` — Presentation slides
-- `docs/IoT_Dashboard_Documentation.pdf` — Report (PDF)
+- [Korean Documentation (README_ko.md)](docs/ko/README_ko.md)
+- `docs/ko/CONFIGURATION_ko.md` — Configuration guide
+- `docs/ko/MODULES_ko.md` — Modules & architecture
+- `docs/ko/API_SPEC_ko.md` — API specification
+- `docs/ko/IoT_Dashboard_Presentation_ko.pptx` — Presentation slides
+- `docs/ko/IoT_Dashboard_Documentationz_ko.pdf` — Report (PDF)
 
 ---
 
