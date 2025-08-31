@@ -1,4 +1,14 @@
-# 📡 IoT 대시보드 (React + Node.js + PostgreSQL)
+<p align="center">
+  <img src="https://img.shields.io/badge/Frontend-React-61DAFB?logo=react&logoColor=white" />
+  <img src="https://img.shields.io/badge/Backend-Node.js-339933?logo=node.js&logoColor=white" />
+  <img src="https://img.shields.io/badge/Database-PostgreSQL-336791?logo=postgresql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Styling-Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white" />
+  <img src="https://img.shields.io/badge/Build-Vite-646CFF?logo=vite&logoColor=white" />
+</p>
+
+# 📡 IoT 대시보드
+
+[🇺🇸 English README](../README.md)
 
 ## 👩‍💻 프로젝트 개요
 
