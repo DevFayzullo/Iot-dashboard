@@ -32,14 +32,12 @@ export default function Login() {
       className="min-h-screen relative overflow-hidden 
                     bg-gradient-to-br from-indigo-600 via-sky-600 to-cyan-500 
                     flex items-center justify-center">
-      {/* Centered card */}
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="w-full max-w-md">
         <div className="backdrop-blur-xl bg-white/70 dark:bg-slate-900/60 shadow-2xl shadow-indigo-500/20 border border-white/40 dark:border-white/10 rounded-3xl p-6 sm:p-8">
-          {/* Brand header */}
           <div className="flex items-center gap-4 mb-6">
             <div className="relative">
               <div className="size-14 rounded-2xl bg-gradient-to-br from-indigo-600 to-violet-600 text-white shadow-lg flex items-center justify-center">
@@ -57,7 +55,6 @@ export default function Login() {
             </div>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleLogin} className="space-y-4">
             <div>
               <label className="mb-1.5 block text-sm font-medium text-slate-700 dark:text-slate-200">
