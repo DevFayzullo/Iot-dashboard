@@ -62,7 +62,6 @@ iot-dashboard/
 cd backend
 npm install
 node server.js
-# Server runs on http://localhost:3001
 ```
 
 ### 2) Frontend
@@ -71,7 +70,6 @@ node server.js
 cd frontend
 npm install
 npm run dev
-# App runs on http://localhost:5173
 ```
 
 ---
