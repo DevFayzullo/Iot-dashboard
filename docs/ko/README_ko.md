@@ -28,12 +28,12 @@
 # 1) Backend 실행
 cd backend
 npm install
-node server.js   # => http://localhost:3001
+node server.js   
 
 # 2) Frontend 실행
 cd frontend
 npm install
-npm run dev      # => http://localhost:5173
+npm run dev     
 ```
 
 ---
