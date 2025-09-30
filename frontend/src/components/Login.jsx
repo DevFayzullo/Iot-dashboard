@@ -1,7 +1,9 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Cpu, Eye, EyeOff, Lock, User2 } from "lucide-react";
 import { motion } from "framer-motion";
+// agar backend login bo‘lsa:
+// import api from "../lib/api";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -11,27 +13,42 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
+  // Agar allaqachon login bo‘lsa, dashboardga o‘tkaz
+  useEffect(() => {
+    if (localStorage.getItem("token"))
+      navigate("/dashboard", { replace: true });
+  }, [navigate]);
+
   const handleLogin = async (e) => {
     e.preventDefault();
     setError("");
     setLoading(true);
 
-    // Demo delay
+    // === DEMO AUTH ===
     await new Promise((r) => setTimeout(r, 600));
-
     if (username === "admin" && password === "1234") {
-      navigate("/dashboard");
-    } else {
-      setError("Incorrect username or password.");
+      localStorage.setItem("token", "demo-token"); // demo token
+      navigate("/dashboard", { replace: true });
+      setLoading(false);
+      return;
     }
+    // === REAL AUTH (backendga ulanganda) ===
+    // try {
+    //   const res = await api.post("/api/auth/login", { username, password });
+    //   localStorage.setItem("token", res.data.token);
+    //   navigate("/dashboard", { replace: true });
+    // } catch (err) {
+    //   setError(err?.response?.data?.message || "Login failed");
+    // } finally {
+    //   setLoading(false);
+    // }
+
+    setError("Incorrect username or password.");
     setLoading(false);
   };
 
   return (
-    <div
-      className="min-h-screen relative overflow-hidden 
-                    bg-gradient-to-br from-indigo-600 via-sky-600 to-cyan-500 
-                    flex items-center justify-center">
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-indigo-600 via-sky-600 to-cyan-500 flex items-center justify-center">
       <motion.div
         initial={{ opacity: 0, y: 12 }}
         animate={{ opacity: 1, y: 0 }}
@@ -171,7 +188,6 @@ export default function Login() {
             </p>
           </form>
 
-          {/* Footer */}
           <div className="mt-6 border-t border-white/40 dark:border-white/10 pt-4">
             <p className="text-[11px] leading-5 text-slate-500 dark:text-slate-400 text-center">
               By continuing, you agree to the{" "}
@@ -191,7 +207,6 @@ export default function Login() {
           </div>
         </div>
 
-        {/* Tiny credit / environment badge */}
         <div className="mt-6 flex items-center justify-center gap-2 text-[11px] text-white/90">
           <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-2 py-1 backdrop-blur">
             <span className="relative inline-flex size-2 rounded-full bg-emerald-400">
