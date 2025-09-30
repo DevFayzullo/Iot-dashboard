@@ -15,4 +15,5 @@ export default {
     },
   },
   plugins: [require("@tailwindcss/forms")],
+  safelist: [{ pattern: /(from|to)-(indigo|sky|violet|fuchsia)-(200|400)/ }],
 };
