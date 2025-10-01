@@ -4,7 +4,7 @@ import tempIcon from "../assets/temp-icon.svg";
 import humidIcon from "../assets/humidity-icon.svg";
 import doorIcon from "../assets/door-icon.svg";
 import lightIcon from "../assets/light-icon.svg";
-import axios from "axios";
+import api from "../lib/api";
 
 const Dashboard = () => {
   const [temperatureData, setTemperatureData] = useState([]);
@@ -18,9 +18,9 @@ const Dashboard = () => {
     try {
       setError("");
       const [t, d, l] = await Promise.all([
-        axios.get("http://localhost:3001/api/temperature"),
-        axios.get("http://localhost:3001/api/door"),
-        axios.get("http://localhost:3001/api/light"),
+        api.get("/api/temperature"),
+        api.get("/api/door"),
+        api.get("/api/light"),
       ]);
       setTemperatureData(t.data || []);
       setDoorData(d.data || []);
@@ -70,16 +70,14 @@ const Dashboard = () => {
         </div>
       </header>
 
-      {/* content container */}
+      {/* content */}
       <main className="mx-auto max-w-7xl px-4 py-6">
-        {/* error alert */}
         {error && (
           <div className="mb-4 rounded-2xl border border-red-400/30 bg-red-500/10 text-red-100 px-4 py-3 backdrop-blur">
             {error}
           </div>
         )}
 
-        {/* grid */}
         {loading ? (
           <SkeletonGrid />
         ) : (
@@ -140,7 +138,6 @@ const Dashboard = () => {
 
 export default Dashboard;
 
-/* ---------- Skeleton Loader ---------- */
 function SkeletonGrid() {
   const Item = () => (
     <div className="animate-pulse rounded-2xl bg-white/15 ring-1 ring-white/10 backdrop-blur-xl p-5 h-36" />
