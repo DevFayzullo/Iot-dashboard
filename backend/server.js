@@ -10,12 +10,12 @@ const PORT = process.env.PORT || 3001;
 
 const allowedOrigins = [
   "http://localhost:5173",
-  process.env.FRONTEND_URL || "", 
+  process.env.FRONTEND_URL,
 ].filter(Boolean);
 
 const corsOptions = {
   origin(origin, cb) {
-    if (!origin) return cb(null, true); 
+    if (!origin) return cb(null, true);
     if (allowedOrigins.includes(origin)) return cb(null, true);
     return cb(new Error("Not allowed by CORS"));
   },
@@ -25,14 +25,15 @@ const corsOptions = {
   maxAge: 600,
 };
 
-app.use(cors(corsOptions)); 
+app.use(cors(corsOptions));
 
 app.use(express.json());
+
 app.use("/api", apiRoutes);
 
-app.get("/health", (req, res) => res.send("ok"));
+app.get("/health", (_req, res) => res.send("ok"));
 
-app.use((err, req, res, next) => {
+app.use((err, _req, res, next) => {
   if (err && err.message === "Not allowed by CORS") {
     return res.status(403).json({ error: "CORS blocked: Origin not allowed" });
   }
