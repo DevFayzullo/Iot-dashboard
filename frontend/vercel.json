@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/api/:path*", "destination": "https://iot-dashboard-backend-heu9.onrender.com" }
+  ]
+}
