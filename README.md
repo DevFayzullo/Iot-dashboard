@@ -16,6 +16,12 @@ This project is a **full-stack IoT dashboard** that visualizes sensor data:
 
 ---
 
+## 📸 Preview
+
+![screenshot](./docs/preview.png)
+
+---
+
 ## 🚀 Tech Stack
 
 - **Frontend**: React (Vite) + Tailwind CSS

@@ -22,6 +22,12 @@
 
 ---
 
+## 📸 미리보기
+
+![screenshot](../preview.png)
+
+---
+
 ## 🚀 실행 방법
 
 ```bash
