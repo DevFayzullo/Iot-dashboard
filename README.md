@@ -74,6 +74,12 @@ npm run dev
 
 ---
 
+## 🌐 Live Demo
+
+👉 [Click here to view the live demo](https://iot-dashboard-gamma.vercel.app/)
+
+---
+
 ## 🔑 Demo Login
 
 - **ID:** `admin`

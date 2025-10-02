@@ -28,13 +28,19 @@
 # 1) Backend 실행
 cd backend
 npm install
-node server.js   
+node server.js
 
 # 2) Frontend 실행
 cd frontend
 npm install
-npm run dev     
+npm run dev
 ```
+
+---
+
+## 🌐 라이브 데모
+
+👉 [라이브 데모 보러가기](https://iot-dashboard-gamma.vercel.app/)
 
 ---
 
