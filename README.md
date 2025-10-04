@@ -51,7 +51,7 @@ iot-dashboard/
 │  ├─ routes/           # API routes
 │  ├─ server.js         # Express server bootstrap
 │  └─ .env.example      # Example environment config
-├─ frontend/            # React + Tailwind
+├─ frontend/            # React + TailwindCSS
 │  ├─ public/           # logo.svg
 │  ├─ src/              # components, App.jsx, main.jsx, index.css
 │  └─ tailwind.config.js, vite.config.js, postcss.config.js
