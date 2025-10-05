@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const api = axios.create({
-  baseURL: "/", // muhim!
+  baseURL: "/", 
   withCredentials: false,
   headers: { "Content-Type": "application/json" },
 });
