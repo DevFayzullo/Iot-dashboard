@@ -2,8 +2,6 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Cpu, Eye, EyeOff, Lock, User2 } from "lucide-react";
 import { motion } from "framer-motion";
-// agar backend login bo‘lsa:
-// import api from "../lib/api";
 
 export default function Login() {
   const [username, setUsername] = useState("");
@@ -13,7 +11,6 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // Agar allaqachon login bo‘lsa, dashboardga o‘tkaz
   useEffect(() => {
     if (localStorage.getItem("token"))
       navigate("/dashboard", { replace: true });
@@ -24,24 +21,13 @@ export default function Login() {
     setError("");
     setLoading(true);
 
-    // === DEMO AUTH ===
     await new Promise((r) => setTimeout(r, 600));
     if (username === "admin" && password === "1234") {
-      localStorage.setItem("token", "demo-token"); // demo token
+      localStorage.setItem("token", "demo-token"); 
       navigate("/dashboard", { replace: true });
       setLoading(false);
       return;
     }
-    // === REAL AUTH (backendga ulanganda) ===
-    // try {
-    //   const res = await api.post("/api/auth/login", { username, password });
-    //   localStorage.setItem("token", res.data.token);
-    //   navigate("/dashboard", { replace: true });
-    // } catch (err) {
-    //   setError(err?.response?.data?.message || "Login failed");
-    // } finally {
-    //   setLoading(false);
-    // }
 
     setError("Incorrect username or password.");
     setLoading(false);
