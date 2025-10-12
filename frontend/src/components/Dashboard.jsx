@@ -42,11 +42,9 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-indigo-600 via-sky-600 to-cyan-500">
-      {/* aurora blobs */}
       <div className="pointer-events-none absolute -top-32 -left-32 h-[40rem] w-[40rem] rounded-full bg-white/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -right-32 h-[38rem] w-[38rem] rounded-full bg-black/10 blur-3xl" />
 
-      {/* top bar */}
       <header className="sticky top-0 z-10 backdrop-blur-xl bg-white/10 ring-1 ring-white/10">
         <div className="mx-auto max-w-7xl px-4 py-3 flex items-center justify-between">
           <h1 className="text-white font-semibold tracking-tight text-xl sm:text-2xl flex items-center gap-2">
@@ -70,7 +68,6 @@ const Dashboard = () => {
         </div>
       </header>
 
-      {/* content */}
       <main className="mx-auto max-w-7xl px-4 py-6">
         {error && (
           <div className="mb-4 rounded-2xl border border-red-400/30 bg-red-500/10 text-red-100 px-4 py-3 backdrop-blur">
@@ -122,7 +119,6 @@ const Dashboard = () => {
         )}
       </main>
 
-      {/* footer badge */}
       <footer className="py-6">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-center gap-2 text-[11px] text-white/90">
           <span className="inline-flex items-center gap-1 rounded-full bg-white/15 px-2 py-1 backdrop-blur ring-1 ring-white/20">
