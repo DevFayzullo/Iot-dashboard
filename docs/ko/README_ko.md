@@ -8,7 +8,7 @@
 
 # 📡 IoT 대시보드
 
-[🇺🇸 English README](../README.md)
+[🇺🇸 English README](../../README.md)
 
 ## 👩‍💻 프로젝트 개요
 
